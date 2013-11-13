@@ -1,0 +1,12 @@
+---
+title: We couldn’t find the page you requested.
+---
+
+- set_custom_page_classes('server-error error-404')
+
+%h1 We couldn’t find the page you requested.
+
+%p
+  The page you requested doesn’t exist. If you followed a link here, the page might have moved. Please try again from the
+  = succeed '.' do
+    = link_to 'home page', '/'

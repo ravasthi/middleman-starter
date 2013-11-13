@@ -1,0 +1,21 @@
+- wrap_layout :layout do
+  %article
+    .header
+      %p.date= format_date(current_article.date)
+      %h1.title
+        = current_article.title
+    .body
+      = preserve do
+        = yield
+    .footer
+      %p.tags
+        Tagged with
+        - current_article.tags.each do |tag|
+          = link_to tag, tag_path(tag), class: "tag"
+      %nav.next-prev
+        - if current_article.next_article
+          %p.next
+            Next: #{link_to current_article.next_article.title, current_article.next_article}
+        - if current_article.previous_article
+          %p.previous
+            Previous: #{link_to current_article.previous_article.title, current_article.previous_article}

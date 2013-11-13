@@ -1,0 +1,10 @@
+/*-----[ header ]---------------------------------------------------------------
+| Common page header styles.
+*/
+header.global
+{
+  margin-bottom: $body-text-line-height;
+  border-bottom: 1px solid $light-stroke;
+  padding: 1.5 * $body-text-line-height 0 $body-text-line-height - 1;
+  text-align: center;
+}

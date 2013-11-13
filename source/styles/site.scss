@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------------------
+| application.css
+| application name v1.0
+|
+| This file rolls up the main styles for the entire application. You'll need to
+| include the IE-specific and print stylesheets, as well as the display-size-
+| specific styles separately in your markup. See the readme for an explanation
+| of the directory organization.
+------------------------------------------------------------------------------*/
+
+// Reset - use Compass' reset mixins
+@import "compass/reset";
+@include global-reset;
+@include reset-html5;
+
+// Third-party mixins
+@import "compass/css3";
+
+// ----- Icon fonts
+$el-path: font-path('elusive/Elusive-Icons');
+$en-path: font-path('entypo/entypo');
+$es-path: font-path('entypo/entypo-social');
+$fa-path: font-path('font-awesome/fontawesome-webfont');
+$ti-path: font-path('typicons/typicons-regular-webfont');
+@import "shared/sass-icon-fonts/elusive";
+@import "shared/sass-icon-fonts/entypo";
+@import "shared/sass-icon-fonts/entypo-social";
+@import "shared/sass-icon-fonts/font-awesome";
+@import "shared/sass-icon-fonts/typicons";
+@include fa-font;
+
+// Basics
+// STILL have to provide relative paths in order for changes to trigger between requests…
+@import "basics/colors";
+@import "basics/typography";
+@import "basics/grid";
+
+// Shared
+@import "sassybuttons";
+@import "shared/mixins";
+@import "shared/foundation";
+@import "shared/page";
+@import "shared/forms";
+@import "shared/alerts";
+@import "shared/pagination";
+@import "shared/header";
+@import "shared/footer";
+
+// Feature-/page-specific
+@import "syntax";
+@import "article";
+@import "sidebar";
+@import "server-error";
+

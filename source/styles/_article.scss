@@ -1,0 +1,102 @@
+/*-----[ article ]--------------------------------------------------------------
+*/
+article
+{
+  margin-bottom: $section-spacing;
+
+  .header
+  {
+    .title
+    {
+      margin: 0 0 $body-text-line-height / 2;
+
+      &, a
+      {
+        color: $heading-text-color;
+      }
+
+      a:hover, a:active
+      {
+        color: darken($heading-text-color, 6);
+      }
+    }
+
+    .date
+    {
+      margin: 0;
+      color: $secondary-text-color;
+    }
+  }
+
+  .body
+  {
+    p, ul, blockquote
+    {
+      &:first-of-type, &:first-child
+      {
+        margin-top: 0;
+      }
+    }
+
+    figure, img
+    {
+      max-width: 100%;
+    }
+
+    figure
+    {
+      text-align: center;
+    }
+  }
+
+  pre.highlight
+  {
+    margin: $body-text-line-height (-$column-width);
+    border-top: 1px solid $light-stroke;
+    border-bottom: 1px solid $light-stroke;
+
+    table, th, td
+    {
+      margin: 0;
+      border-style: none;
+    }
+
+    table .gutter
+    {
+      color: $light-text-color;
+    }
+
+    .err
+    {
+      color: $red;
+      background-color: transparent;
+    }
+
+    @media (min-width: 600px)
+    {
+      margin: $body-text-line-height 0;
+      border: 1px solid $light-stroke;
+    }
+  }
+
+  .footer
+  {
+    color: $secondary-text-color;
+
+    .next-prev
+    {
+      margin-top: $body-text-line-height;
+      color: $secondary-text-color;
+
+      p
+      {
+        margin: 0;
+      }
+    }
+  }
+
+  .tag
+  {
+    margin-left: $column-width / 2;
+  }
+}

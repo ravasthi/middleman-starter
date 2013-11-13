@@ -1,0 +1,19 @@
+/*-----[ sidebar ]--------------------------------------------------------------
+*/
+.sidebar
+{
+  .sidebar-block
+  {
+    margin-bottom: $section-spacing;
+
+    h3
+    {
+      margin-top: 0;
+    }
+  }
+
+  ul
+  {
+    @include colored-bullets;
+  }
+}

@@ -1,0 +1,80 @@
+!!!
+%html{lang: "en"}
+  %head
+    / meta tags
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+
+    / stylesheets
+    = stylesheet_link_tag "site.css", media: "all"
+
+    / conditional comments
+    /[if IE]
+      = stylesheet_link_tag "ie.css", media: "all"
+
+    / print stylesheet
+    = stylesheet_link_tag "print.css", media: "print"
+
+    / external styles
+    / <link rel="stylesheet" type="text/css" media="all" href="http://code.jquery.com/ui/1.8.23/themes/redmond/jquery-ui.css"/>
+
+    / Favicons and touch icons
+    / For retina-display iPads
+    %link{href: "/images/apple-touch-icon-xlarge.png", rel: "apple-touch-icon-precomposed", sizes: "144x144", type: "image/png"}/
+    / For retina-display iPhones
+    %link{href: "/images/apple-touch-icon-large.png", rel: "apple-touch-icon-precomposed", sizes: "114x114", type: "image/png"}/
+    / For iPad 1
+    %link{href: "/images/apple-touch-icon-medium.png", rel: "apple-touch-icon-precomposed", sizes: "72x72", type: "image/png"}/
+    / For iPhone 3G, iPod Touch and Android
+    %link{href: "/images/apple-touch-icon-small.png", rel: "apple-touch-icon-precomposed", type: "image/png"}/
+    / For Nokia
+    %link{href: "/images/apple-touch-icon-small.png", rel: "shortcut icon"}/
+    / For everything else
+    %link{href: "/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+
+    / header javascript
+    / stand-alone utilities
+    :javascript
+      // scroll to hide iPhone URL bar; from http://remysharp.com/2010/08/05/doing-it-right-skipping-the-iphone-url-bar/
+      /iphone/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+        if (!pageYOffset) window.scrollTo(0, 1);
+      }, 1000);
+
+    / Typekit
+    = javascript_include_tag "//use.typekit.net/ape4sbi.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    / HTML5 and media query polyfill for IE8 and below
+    = javascript_include_tag "lib/shivs-custom.js"
+
+    %title= page_title
+
+  %body{ class: "#{page_classes} #{custom_page_classes}" }
+    .page
+      %header.global
+        %h1 Your Blog
+
+      %section#content
+        .main
+          = yield
+
+        .sidebar
+          = partial "sidebar"
+
+      %footer.global
+        &copy; #{Date.today.strftime('%Y')} Blog Author.
+
+    / all other javascript goes at the end of the body
+    = javascript_include_tag "site.js"
+
+    / page- or feature-specific javascript
+    - if content_for? :custom_javascript_includes
+      = yield_content :custom_javascript_includes
+
+    / analytics
+    = partial "google-analytics"
+
+    / onload javascript
+    = partial "onready"
+

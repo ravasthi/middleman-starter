@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  (function($) {
+    $("html").addClass(fiftyfive.util.getIEClass());
+
+    <%= yield_content :before_ready %>
+
+    $(function() {
+      $("input[placeholder], textarea[placeholder]").forminputplaceholdertextwidget();
+
+      <%= yield_content :onready %>
+    });
+  })(jQuery);
+</script>
