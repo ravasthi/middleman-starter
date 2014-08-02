@@ -5,42 +5,42 @@ set :haml, :format => :html5
 # Blog settings
 ###
 
-Time.zone = "America/Los_Angeles"
+Time.zone = 'America/Los_Angeles'
 
 activate :blog do |blog|
-  blog.prefix              = "blog"
-  blog.permalink           = ":year/:month/:title.html"
-  blog.sources             = ":year-:month-:day-:title.html"
-  # blog.taglink           = "tags/:tag.html"
-  blog.layout              = "article"
+  blog.prefix              = 'blog'
+  blog.permalink           = '{year}/{month}/{title}.html'
+  blog.sources             = '{year}-{month}-{day}-{title}.html'
+  # blog.taglink           = 'tags/:tag.html'
+  blog.layout              = 'article'
   blog.summary_separator   = /READMORE/
   # blog.summary_length    = 250
-  # blog.year_link         = ":year.html"
-  # blog.month_link        = ":year/:month.html"
-  # blog.day_link          = ":year/:month/:day.html"
-  # blog.default_extension = ".markdown"
+  # blog.year_link         = '{year}.html'
+  # blog.month_link        = '{year}/{month}.html'
+  # blog.day_link          = '{year}/{month}/{day}.html'
+  # blog.default_extension = '.markdown'
 
-  blog.tag_template        = "tag.html"
-  blog.calendar_template   = "calendar.html"
+  blog.tag_template        = 'tag.html'
+  blog.calendar_template   = 'calendar.html'
 
   blog.paginate            = true
   blog.per_page            = 10
-  blog.page_link           = "page/:num"
+  blog.page_link           = 'page/{num}'
 end
 
-page "/feed.xml", :layout => false
+page '/feed.xml', layout: false
 
 activate :directory_indexes
 
 # Markdown
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Livereload
 activate :livereload
 
 # Syntax highlighting
-activate :syntax, :line_numbers => true
+activate :syntax, line_numbers: true
 
 ###
 # Compass
@@ -55,9 +55,9 @@ require 'sassy-buttons'
 compass_config do |config|
   config.relative_assets         = true
   config.additional_import_paths = [
-    "styles/basics",
-    "styles/shared",
-    "styles/vendor/icon-fonts"
+    'styles/basics',
+    'styles/shared',
+    'styles/vendor/icon-fonts'
   ]
 end
 
@@ -68,19 +68,19 @@ end
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+# page '/path/to/file.html', :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+# page '/path/to/file.html', :layout => :otherlayout
 #
 # A path which all have the same layout
 # with_layout :admin do
-#   page "/admin/*"
+#   page '/admin/*'
 # end
 
 # Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
+# page '/this-page-has-no-template.html', :proxy => '/template-file.html' do
+#   @which_fake_page = 'Rendering a fake page with a variable'
 # end
 
 ###
@@ -93,7 +93,7 @@ end
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
-#     "Helping"
+#     'Helping'
 #   end
 # end
 
@@ -141,11 +141,11 @@ configure :build do
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
+  # require 'middleman-smusher'
   # activate :smusher
 
   # Or use a different image path
-  # set :http_path, "/Content/images/"
+  # set :http_path, '/Content/images/'
 end
 
 ###
@@ -154,11 +154,11 @@ end
 
 activate :deploy do |deploy|
   deploy.method       = :rsync
-  deploy.host         = "your.domain.com"
-  deploy.path         = "/home/user/directory"
+  deploy.host         = 'your.domain.com'
+  deploy.path         = '/home/user/directory'
   deploy.build_before = true
   # Optional Settings
-  # deploy.user  = "tvaughan" # no default
+  # deploy.user  = 'tvaughan' # no default
   # deploy.port  = 5309 # ssh port, default: 22
   # deploy.clean = true # remove orphaned files on remote host, default: false
 end
