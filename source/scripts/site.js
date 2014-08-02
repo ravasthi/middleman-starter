@@ -1,5 +1,5 @@
-//= require lib/jquery
-//= require lib/jquery-ui.widget
-//= require lib/fiftyfive-utils/55_utils
-//= require lib/fiftyfive-utils/jquery.ui.forminputplaceholdertext
+//= require vendor/jquery
+//= require vendor/jquery-ui.widget
+//= require vendor/fiftyfive-utils/55_utils
+//= require vendor/fiftyfive-utils/jquery.ui.forminputplaceholdertext
 //= require common

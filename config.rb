@@ -57,7 +57,7 @@ compass_config do |config|
   config.additional_import_paths = [
     "styles/basics",
     "styles/shared",
-    "styles/shared/sass-icon-fonts"
+    "styles/vendor/icon-fonts"
   ]
 end
 
@@ -122,6 +122,10 @@ configure :build do
   ignore '.DS_Store'
   ignore 'images/originals/*'
   ignore 'images/**/*.psd'
+  ignore '**/LICENSE*'
+  ignore '**/NOTICE*'
+  ignore '**/README*'
+  ignore '**/HISTORY*'
 
   # For example, change the Compass output style for deployment
   # activate :minify_css

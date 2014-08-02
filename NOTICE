@@ -1,25 +1,20 @@
 Middleman Starter
-Copyright 2013 Richa Avasthi
+Copyright 2014 Richa Avasthi
 
-The product contains the Font Awesome icon font, licensed under the SIL Open
-Font License.
+The product contains the Font Awesome icon font, licensed under the SIL Open Font License.
 (http://fortawesome.github.com/Font-Awesome/)
 
-The product contains the Elusive icon font, licensed under the SIL Open Font
-License.
+The product contains the Elusive icon font, licensed under the SIL Open Font License.
 (http://aristeides.com/elusive-iconfont/)
 
-The product contains the Entypo icon font, licensed under the SIL Open Font
-License.
+The product contains the Ionicons icon font, licensed under the MIT License.
 (http://www.entypo.com)
 
-The product contains the Typicons icon font, licensed under the Creative
-Commons Attribution-ShareAlike 3.0 Unported License.
-(http://typicons.com)
+The product contains the general set of the Foundation Icons icon font, licensed under the MIT License.
+(http://zurb.com/playground/foundation-icons)
 
-The product contains mixins from the Sass Icon Fonts project, licensed under
-the MIT License.
-(https://github.com/rstacruz/sass_icon_fonts)
+The product contains mixins from the Icon Fonts project, licensed under the MIT License.
+(https://github.com/rstacruz/iconfonts)
 
 This product is based off the 55 Minutes CSS3 foundation project, licensed under the Apache v2 License.
 (https://github.com/ravasthi/css3-foundation)
