@@ -1,9 +1,7 @@
 /*-----[ server errors ]--------------------------------------------------------
 */
-.server-error
-{
-  .main p
-  {
+.server-error {
+  .main p {
     @include large-text;
   }
 }

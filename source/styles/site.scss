@@ -13,18 +13,10 @@
 
 // Third-party mixins
 @import 'compass/css3';
+@import 'susy';
 
 // ----- Icon fonts
-$el-path  : '/fonts/elusive/';
-$fa-path  : '/fonts/font-awesome/';
-$fig-path : '/fonts/foundation-icons/';
-$ion-path : '/fonts/ionicons/';
-@import 'vendor/icon-fonts/elusive';
-@import 'vendor/icon-fonts/font-awesome';
-@import 'vendor/icon-fonts/foundation-general';
-@import 'vendor/icon-fonts/ionicons';
-@import 'shared/icon-font-mixins';
-@include fa-font-no-version;
+@import 'font-awesome/scss/font-awesome';
 
 // Basics
 // STILL have to provide relative paths in order for changes to trigger between requests…

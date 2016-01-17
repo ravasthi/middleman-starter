@@ -1,72 +1,68 @@
 /*-----[ page ]-----------------------------------------------------------------
 | Top-level styles for content. Otherwise unqualified styles should go here.
 */
-.page
-{
+.page {
   margin: 0;
   padding: 0 $column-width;
+
   background-color: $content-bg;
 
-  @media (min-width: 600px)
-  {
+  @media (min-width: 600px) {
     margin: 0 auto;
     padding: 0 $gutter-width;
     max-width: $max-page-width;
   }
 
-  @media (min-width: 768px)
-  {
-    #content
-    {
+  @media (min-width: 768px) {
+    #content {
       @include clearfix;
     }
 
-    .main, .sidebar
-    {
+    .main,
+    .sidebar {
       float: left;
     }
 
-    .main
-    {
+    .main {
       margin-right: 5%;
       width: 65%;
     }
 
-    .sidebar
-    {
+    .sidebar {
       width: 30%;
     }
   }
 
-  .article-count, .article-date
-  {
+  .article-count,
+  .article-date {
     margin-left: $horizontal-nudge;
-    @include keep-together;
+
     color: $light-text-color;
+
+    @include keep-together;
   }
 
   .annotation,
   .fine-print,
-  .form-help
-  {
+  .form-help {
     color: $secondary-text-color;
+
     font-weight: normal;
     font-style: italic;
   }
 
-  .fine-print, .form-help
-  {
+  .fine-print,
+  .form-help {
     margin: 0;
+
     @include small-text;
   }
 
-  .subtitle
-  {
+  .subtitle {
     font-weight: normal;
   }
 
-  .subheading
-  {
+  .subheading {
     font-weight: bold;
   }
 }

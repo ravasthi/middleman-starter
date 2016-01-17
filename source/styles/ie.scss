@@ -13,37 +13,35 @@
 | for details.
 ------------------------------------------------------------------------------*/
 
-@import "typography";
-@import "grid";
+@import 'typography';
+@import 'grid';
 
 /*-----[ general ]--------------------------------------------------------------
 */
-.lte7
-{
-  .group
-  {
+.lte7 {
+  .group {
     zoom: 1;
   }
 
   input[type=submit],
   input[type=button],
   button,
-  a.button
-  {
-    width: 1;
+  a.button {
     overflow: visible;
+
+    width: 1;
   }
 }
 
-.ie8, .ie9
-{
+.ie8,
+.ie9 {
   input[type=submit],
   input[type=button],
   button,
-  a.button
-  {
-    &, &.destructive, &[disabled]
-    {
+  a.button {
+    &,
+    &.destructive,
+    &[disabled] {
       padding: 3px $column-width;
     }
   }

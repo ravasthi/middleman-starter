@@ -1,11 +1,12 @@
 /*-----[ footer ]---------------------------------------------------------------
 | Common page footer styles.
 */
-footer.global
-{
+footer.global {
   margin: $body-text-line-height / 2 0 0;
   border-top: 1px solid $light-stroke;
   padding: ($body-text-line-height / 2 - 1) 0 $body-text-line-height / 2;
+
   color: $secondary-text-color;
+
   @include secondary-text;
 }
